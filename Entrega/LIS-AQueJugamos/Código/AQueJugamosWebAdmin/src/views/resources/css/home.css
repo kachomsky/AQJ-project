@@ -1,0 +1,181 @@
+footer{
+	margin-top: 8%;
+	background-color: #333;
+	color: white;
+}
+
+html, body{
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-inverse {
+    background-color: #0d47a1;
+}
+
+.navbar{
+	border-radius: 0px; 
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #e0f2f1;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #4285F4;
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    background-color: #4285F4;
+}
+	
+textarea {
+    resize: none;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #e0f2f1;
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #e0f2f1;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #0099CC;
+}
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
+
+.glyphicon-remove{
+	cursor: pointer;
+}
+
+.glyphicon-pencil{
+    cursor: pointer;
+}
+
+.alert-danger{
+    text-align: center;
+}
+
+.alert{
+    text-align: center;
+}
+
+.menuHome{
+    margin-top: 5%;
+}
+
+.menuHome img{
+    width: 40%;
+}
+
+.imageCol{
+    margin-left: 15%;
+}
+
+.textoSeccion{
+    margin-top: 4%;
+    text-align: justify;
+    margin-right: 15%;
+}
+
+.seccionPanel:hover{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    border: solid red;
+    cursor: pointer;
+}
+
+.botonAddGame{
+    margin-top: 2%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+}
+
+.glyphicon-pencil:before{
+    margin-right: 30px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.homeSeleccionLink{
+    text-decoration: none;
+    color: #333;
+}
+
+.homeSeleccionLink:hover{
+    text-decoration: none;
+    color: #333;
+}
+
+/*.inputFile{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}*/
+
+.submitFile{
+    color: white;
+    background: #5bc0de;
+    border-radius: 6px;
+    padding: 1%;
+    border-color: #46b8da;
+    margin-left: 1%; 
+}
+.botonAddGame{
+    float: left;
+    margin-right: 5%;
+}
+
+.botonAddFichero{
+    margin:10%;
+}
+
+.inputFile{
+    float:left;
+}
+
+.submitFile:hover{
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}

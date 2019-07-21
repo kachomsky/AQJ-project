@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1096</x>
+      <y>8</y>
+      <w>296</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+Main::com.aquejugamos.general
+--
+#main(String[]):void
+#registrarse(UsuarioDAO):void
+#login(UsuarioDAO):void
+#afegirLlistaFavorits(UsuarioDAO):void
+#pujarPartida(PartidaDAO,UsuarioDAO:void
+#agregarAmic(UsuarioDAO):void
+#mostrarAmics(UsuarioDAO):void
+#buscarAmics(UsuarioDAO):void
+#logout():void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1224</x>
+      <y>256</y>
+      <w>288</w>
+      <h>408</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+Usuari::com.aquejugamos.general
+--
+-idUsuari:int
+-nomUsuari:String
+-password:String
+-mail:String
+-activo:int
+-bloqueado:int
+-isAdmin:int
+-grupo:String
+-fecha:String
+-provincia:String
+-logejat:boolean
+-llistaJocs:ArrayList&lt;Joc&gt;
+--
+#Usuari(int,String,String,String,int,int,int,String,String
+String)
+#getFecha():String
+#setFecha(String):void
+#getProvincia():String
+#setProvincia(String):void
+#addJocToUser(Joc):void
+#getLogejat():boolean
+#setLogejat(boolean):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1552</x>
+      <y>256</y>
+      <w>264</w>
+      <h>584</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+Joc::com.aquejugamos.general
+--
+-idJuego: int
+-idCategoria: int
+-nomCategoria: String
+-edad: int
+-nomJoc: String
+-duracio: String
+-numeroJugadors: String
+-categoria: String
+-dificultat: int
+-descripcio: String
+-tipo: String
+-idTipo: int
+-imagen: String
+--
+#Joc(int,int,String,String,int,int,String,String,
+String,String String,int,String)
+#getIdJoc():int
+#setIdJoc(int):void
+#getIdCategoria():int
+#setIdCategoria(int):void
+#getNomCategoria():String
+#setNomCategoria(String):void
+#getNomJoc():String
+#setNomJoc(String):void
+#getDificultat():int
+#setDificultat(int):void
+#getEdat():int
+#setEdat(int):void
+#getNumeroJugadors():String
+#setNumeroJugadors(String):void
+#getDuracio():String
+#setDuracio(String):void
+#getTipo():String
+#setTipo(String):void
+#getDescripcio():String
+#setDescripcio(String):void
+#getValoracio():String
+#setValoracio(String):void
+#getIdTipo():int
+#setIdTipo(int):void
+#getImagen():String
+#setImagen(String):void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>0</y>
+      <w>232</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Abstract Class&gt;&gt;
+DAOFactory::com.aquejugamos.DAO
+--
+-MYSQL: public static final int
+-MYSQLTEST: public static final int
+--
+/+getJocAlternatiuDAO():JocAlternatiuDAO/
+/+getJocDAO():JocDAO/
+/+getJocTaulaDAO():JocTaulaDAO/
+/+getPartidaDAO():PartidaDAO/
+/+getUsuarioDAO():UsuarioDAO/
+#getDAOFactory(int):DAOFactory
+
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>280</y>
+      <w>272</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Interface&gt;&gt;
+JocAlternatiuDAO::com.aquejugamos.DAO
+--
+#carregarJocsAlternatius():void
+#getLlistaJocsAlternatius():ArrayList&lt;JocAlternatiu&gt; 
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>944</x>
+      <y>416</y>
+      <w>272</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Interface&gt;&gt;
+JocDAO::com.aquejugamos.DAO
+--
+#mostrarJocs():void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>656</x>
+      <y>400</y>
+      <w>272</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Interface&gt;&gt;
+JocTaulaDAO::com.aquejugamos.DAO
+--
+#carregarJocsTaula():void
+#getLlistaJocsTaula():ArrayList&lt;JocTaula&gt;
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>280</y>
+      <w>272</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Interface&gt;&gt;
+PartidaDAO::com.aquejugamos.DAO
+--
+#pujarPartida(int,int,String,int,int,int,String,
+String,String):void
+#obtindreIdUltimaPartida():int
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>416</y>
+      <w>272</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Interface&gt;&gt;
+UsuarioDAO::com.aquejugamos.DAO
+--
+#carregarUsuaris():void
+#comprobarUsuari(String,String):boolean
+#afegirLlistaPreferits(int,int):void
+#consultaDadesUsuari():void
+#insertarUsuari(Usuari):boolean
+#comprovarUsuariLogejat():boolean
+#carregarAmicsUsuari():void
+#agregarAmic(int,int):boolean
+#logout():void
+#getLlistaUsuaris():ArrayList&lt;Usuari&gt;
+#getLlistaIdUsuaris():ArrayList&lt;Integer&gt;
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>856</x>
+      <y>224</y>
+      <w>264</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Abstract Class&gt;&gt; extends de DAOFACTORY
+MysqlDAOFactory::com.aquejugamos.DAO
+--
+-logger: private static Logger
+--
+#MysqlDAOFactory()
+#crearConexio():Connection
+#getJocAlternatiuDAO():JocAlternatiuDAO
+#getJocTaulaDAO():JocTaulaDAO
+#getJocDAO():JocDAO
+#getPartidaDAO():PartidaDAO
+#getUsuarioDAO():UsuarioDAO
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>168</x>
+      <y>960</y>
+      <w>344</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+JocAlternatiuDAO::com.aquejugamos.DAOImplementation
+--
+-llistaAlternatius:ArrayList&lt;JocAlternatiu&gt;
+-databaseTest:int
+-logger:private static Logger
+--
+#JocAlternatiuDAOMysqlImp()
+#carregarJocsAlternatius():void
+#getLlistaJocsAlternatius():ArrayList&lt;JocAlternatiu&gt; 
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1072</x>
+      <y>728</y>
+      <w>336</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+JocDAOMysqlImp::com.aquejugamos.DAOImplementation
+--
+-logger: private static Logger
+-databaseTest:int
+--
+#JocDAOMysqlImp(int)
+#JocDAOMysql()
+#mostrarJocs():void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>672</y>
+      <w>344</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+PartidaDAOMysqlImp::com.aquejugamos.DAOImplementation
+--
+-databaseTest:int
+-logger:private static Logger
+--
+#PartidaDAOMysqlImp()
+#PartidaDAOMysqlImp(int)
+#pujarPartida(int,int,String,int,int,int,String,String,String):void
+#obtindreIdUltimaPartida():int
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>568</y>
+      <w>344</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+JocTaulaDAOMysqlImp::com.aquejugamos.DAOImplementation
+--
+-llistaJocsTaula:ArrayList&lt;JocTaula&gt;
+-databaseTest:int
+-logger:private static Logger
+--
+#JocTaulaDAOMysqlImp()
+#JocTaulaDAOMysqlImp(int)
+#carregarJocsTaula():void
+#getLlistaJocsTaula():ArrayList&lt;JocTaula&gt; 
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>656</y>
+      <w>344</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+UsuarioDAOMysqlImp::com.aquejugamos.DAOImplementation
+--
+-databaseTest:int
+-llistaUsuaris:ArrayList&lt;Usuari&gt;
+-llistaIdAmics:ArrayList&lt;Integer&gt;
+-logger:private static Logger
+--
+#UsuarioDAOMysqlImp(int)
+#UusarioDAOMysqlImp()
+#carregarUsuaris():void
+#carregarLlistaFavoritsUser(Usuari):void
+#comprobarUsuari(String,String):boolean
+#afegirLlistaPreferits(int,int):void
+#consultaDadesUsuari():void
+#comprovarUsuariLogejat():boolean
+#logout():void
+#insertarUsuari(Usuari):boolean
+#agregarAmic(int,int):boolean
+#carregarAmicsUsari():void
+#getLlistaIdUsuaris():ArrayList&lt;Integer&gt;
+#getLlistaUsuaris():ArrayList&lt;Usuari&gt;
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1312</x>
+      <y>1016</y>
+      <w>264</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+JocAlternatiu::com.aquejugamos.general
+--
+-materials: String
+--
+#JocAlternatiu(int,int,String,String,int,int,String,String,
+String,String String,int,String,Strings)
+#getMaterials():String
+#setMaterials(String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1816</x>
+      <y>1008</y>
+      <w>264</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Java Class&gt;&gt;
+JocTaula::com.aquejugamos.general
+--
+-materials: String
+--
+#JocTaula(int,int,String,String,int,int,String,String,
+String,String String,int,String)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1728</x>
+      <y>832</y>
+      <w>240</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1440</x>
+      <y>832</y>
+      <w>248</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>290.0;10.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>160</y>
+      <w>200</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>230.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1088</x>
+      <y>160</y>
+      <w>112</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;320.0;120.0;250.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>96</y>
+      <w>392</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;230.0;470.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>56</y>
+      <w>312</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;60.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1024</x>
+      <y>160</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;80.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>80</y>
+      <w>712</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;250.0;870.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>808</x>
+      <y>152</y>
+      <w>304</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;310.0;10.0;70.0;70.0;20.0;360.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>120</y>
+      <w>616</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;370.0;10.0;120.0;750.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1384</x>
+      <y>136</y>
+      <w>240</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>280.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>368</y>
+      <w>144</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;380.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>488</x>
+      <y>592</y>
+      <w>64</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>480</y>
+      <w>80</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>360</y>
+      <w>368</w>
+      <h>616</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>440.0;10.0;390.0;50.0;80.0;40.0;10.0;290.0;160.0;350.0;80.0;750.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1096</x>
+      <y>504</y>
+      <w>128</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>632</y>
+      <w>512</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-llistaUsuaris</panel_attributes>
+    <additional_attributes>620.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>1008</y>
+      <w>824</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-llistaJocsAlternatius</panel_attributes>
+    <additional_attributes>1010.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>712</y>
+      <w>984</w>
+      <h>328</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-llistaJocsTaula</panel_attributes>
+    <additional_attributes>1210.0;390.0;960.0;340.0;440.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
